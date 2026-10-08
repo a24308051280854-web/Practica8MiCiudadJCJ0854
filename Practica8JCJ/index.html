@@ -74,27 +74,6 @@
                 <button type="submit" style="width:100%; padding:14px; background-color:green; color:white; border:none; border-radius:6px; font-size:16px; cursor:pointer; font-weight:bold;">Enviar Consulta</button>
             </form>
         </section>
-
-        <script>
-            // Corregidos los IDs para coincidir con los elementos HTML del formulario
-            const formulario = document.getElementById('formJuarezTurismo');
-            const campoDescripcion = document.getElementById('comentarios');
-            const campoNombre = document.getElementById('nombre');
-
-            formulario.addEventListener('submit', (evento) => {
-                evento.preventDefault();           
-                const situacionTexto = campoDescripcion.value.trim().toLowerCase();
-                const nombreTexto = campoNombre.value.trim().toLowerCase();
-                
-                if (situacionTexto.includes('extraño a mi ex')) {
-                    alert("Atención: Esta línea es solo para consultas turísticas o comunitarias.");
-                } else if (situacionTexto.includes("me duele la panza")) {
-                    alert("Si los síntomas persisten, consulte a un médico de inmediato.");
-                } else {
-                    alert("Su consulta ha sido enviada con éxito.");
-                }
-            });
-        </script>
     </main>
 
     <!-- 4. PIE DE PÁGINA (Footer) -->

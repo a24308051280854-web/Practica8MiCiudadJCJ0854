@@ -1,29 +1,33 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" style="scroll-behavior: smooth;">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Ciudad Juárez</title>
+    <title>Ciudad Juárez</title>
 </head>
 <body style="margin:0; background-color:#eef1f5; font-family:Georgia, 'Times New Roman', serif; color:#1f2a37;">
+    
     <!-- 1. ENCABEZADO -->
-    <header style="background-color:#1f2a37; padding:28px 20px 16px; text-align:center; border-bottom:4px solid #10b981;">
+    <header id="inicio" style="background-color:#1f2a37; padding:28px 20px 16px; text-align:center; border-bottom:4px solid #10b981;">
         <img src="bravosFC.png" alt="Logo o Escudo de Ciudad Juárez" style="height: 60px; width: auto;">
         <h1 style="margin:0 0 6px; font-size:28px; font-weight:normal; color:#ffffff;">Mi Ciudad (Ciudad Juárez)</h1>
         <p style="margin:0; font-family:Arial, sans-serif; font-size:14px; color:#9ba8b8;">| Práctica 8 - JCJ 0854</p>
     </header>
+
     <!-- 2. BARRA DE NAVEGACIÓN -->
-    <nav style="background-color:#2c3e50; padding:12px; text-align:center; font-family:Arial, sans-serif;">
+    <nav style="background-color:#2c3e50; padding:12px; text-align:center; font-family:Arial, sans-serif; position:sticky; top:0; z-index:100;">
         <a href="#inicio" style="color:#ffffff; margin:0 15px; text-decoration:none; font-size:14px;">Inicio</a>
-        <a href="#reportar" style="color:#ffffff; margin:0 15px; text-decoration:none; font-size:14px;">Reporte Ciudadano</a>
-        <a href="#servicios" style="color:#ffffff; margin:0 15px; text-decoration:none; font-size:14px;">Servicios Municipales</a>
+        <a href="#historia" style="color:#ffffff; margin:0 15px; text-decoration:none; font-size:14px;">Historia</a>
+        <a href="#reportar" style="color:#ffffff; margin:0 15px; text-decoration:none; font-size:14px;">Consulta Ciudadana</a>
+        <a href="#servicios" style="color:#ffffff; margin:0 15px; text-decoration:none; font-size:14px;">Lugares / Servicios</a>
         <a href="#contactos" style="color:#ffffff; margin:0 15px; text-decoration:none; font-size:14px;">Teléfonos Útiles</a>
     </nav>
+
     <!-- 3. CUERPO PRINCIPAL -->
     <main style="max-width: 800px; margin: 20px auto; background: white; padding: 25px; border-radius: 6px;">
 
         <!-- Reseña Histórica -->
-        <section id="historia">
+        <section id="historia" style="padding-top:10px;">
             <h2>Historia de nuestra ciudad</h2>
             <p>
                 Ciudad Juárez fue fundada originalmente en 1659 con el nombre de <strong>El Paso del Norte</strong> por frailes franciscanos. 
@@ -33,53 +37,66 @@
                 Hoy en día es una metrópoli caracterizada por su cultura fronteriza, sus tradiciones e hitos históricos ligados a la Revolución Mexicana.
             </p>
         </section>
-        <!-- FORMULARIO: MI CIUDAD (CIUDAD JUÁREZ) -->
- <h2>Formulario de Consulta Ciudad juarez</h2>        
-<form id="formJuarezTurismo">
-    <label for="nombre" style="display:block; margin-bottom:6px; font-size:14px; font-family:Arial, sans-serif;">Nombre completo</label>
-    <input id="nombre" type="text" style="width:100%; box-sizing:border-box; padding:11px 12px; margin-bottom:20px; border:1px solid #cbd5e1; border-radius:6px; font-size:15px; font-family:Arial, sans-serif;">
-    <label for="correo" style="display:block; margin-bottom:6px; font-size:14px; font-family:Arial, sans-serif;">Correo electrónico</label>
-    <input id="correo" type="email"  style="width:100%; box-sizing:border-box; padding:11px 12px; margin-bottom:20px; border:1px solid #cbd5e1; border-radius:6px; font-size:15px; font-family:Arial, sans-serif;">
 
-    <label for="residencia" style="display:block; margin-bottom:6px; font-size:14px; font-family:Arial, sans-serif;">¿Eres residente o visitante de Cd. Juárez?</label>
-    <select id="residencia" required style="width:100%; box-sizing:border-box; padding:11px 12px; margin-bottom:20px; border:1px solid #cbd5e1; border-radius:6px; font-size:15px; font-family:Arial, sans-serif; background-color:#ffffff;">
-        <option value="">Selecciona una opción</option>
-        <option value="Residente">Residente de Juárez</option>
-        <option value="Visitante">Visitante / Turista</option>
-    </select>
-    <label for="lugar" style="display:block; margin-bottom:6px; font-size:14px; font-family:Arial, sans-serif;">Lugar o tema de la ciudad a consultar</label>
-    <select id="lugar" required style="width:100%; box-sizing:border-box; padding:11px 12px; margin-bottom:20px; border:1px solid #cbd5e1; border-radius:6px; font-size:15px; font-family:Arial, sans-serif; background-color:#ffffff;">
-        <option value="">Selecciona una opción</option>
-        <option value="La X (Plaza de la Mexicanidad)">La X (Plaza de la Mexicanidad)</option>
-        <option value="Dunas de Samalayuca">Dunas de Samalayuca</option>
-        <option value="Parque Central">Parque Central</option>
-        <option value="Centro Histórico y Misión de Guadalupe">Centro Histórico y Misión de Guadalupe</option>
-        <option value="Eventos Culturales y Gastronomía">Eventos Culturales y Gastronomía</option>
-    </select>
-    <label for="comentarios" style="display:block; margin-bottom:6px; font-family:Arial, sans-serif; font-size:14px;">Dudas o comentarios sobre tu visita</label>
-    <textarea id="comentarios" rows="4" placeholder="¿Qué te gusta de Ciudad Juárez aparte de las tortas del profe Juárez?" style="width:100%; box-sizing:border-box; padding:11px 12px; margin-bottom:24px; border:1px solid #cbd5e1; border-radius:6px; font-size:15px; font-family:Arial, sans-serif; resize:vertical;"></textarea>
-    <button type="submit" style="width:100%; padding:14px; background-color:green; color:white; border:none; border-radius:6px; font-size:16px; cursor:pointer; font-weight:bold;">Enviar Consulta</button>
-</form>
+        <!-- FORMULARIO: MI CIUDAD (CIUDAD JUÁREZ) -->
+        <section id="reportar" style="padding-top:10px;">
+            <h2>Formulario de Consulta Ciudad Juárez</h2>        
+            <form id="formJuarezTurismo">
+                <label for="nombre" style="display:block; margin-bottom:6px; font-size:14px; font-family:Arial, sans-serif;">Nombre completo</label>
+                <input id="nombre" type="text" style="width:100%; box-sizing:border-box; padding:11px 12px; margin-bottom:20px; border:1px solid #cbd5e1; border-radius:6px; font-size:15px; font-family:Arial, sans-serif;">
+                
+                <label for="correo" style="display:block; margin-bottom:6px; font-size:14px; font-family:Arial, sans-serif;">Correo electrónico</label>
+                <input id="correo" type="email" style="width:100%; box-sizing:border-box; padding:11px 12px; margin-bottom:20px; border:1px solid #cbd5e1; border-radius:6px; font-size:15px; font-family:Arial, sans-serif;">
+
+                <label for="residencia" style="display:block; margin-bottom:6px; font-size:14px; font-family:Arial, sans-serif;">¿Eres residente o visitante de Cd. Juárez?</label>
+                <select id="residencia" required style="width:100%; box-sizing:border-box; padding:11px 12px; margin-bottom:20px; border:1px solid #cbd5e1; border-radius:6px; font-size:15px; font-family:Arial, sans-serif; background-color:#ffffff;">
+                    <option value="">Selecciona una opción</option>
+                    <option value="Residente">Residente de Juárez</option>
+                    <option value="Visitante">Visitante / Turista</option>
+                </select>
+
+                <!-- Ancla para Servicios Municipales / Lugares -->
+                <div id="servicios">
+                    <label for="lugar" style="display:block; margin-bottom:6px; font-size:14px; font-family:Arial, sans-serif;">Lugar o tema de la ciudad a consultar</label>
+                    <select id="lugar" required style="width:100%; box-sizing:border-box; padding:11px 12px; margin-bottom:20px; border:1px solid #cbd5e1; border-radius:6px; font-size:15px; font-family:Arial, sans-serif; background-color:#ffffff;">
+                        <option value="">Selecciona una opción</option>
+                        <option value="La X (Plaza de la Mexicanidad)">La X (Plaza de la Mexicanidad)</option>
+                        <option value="Dunas de Samalayuca">Dunas de Samalayuca</option>
+                        <option value="Parque Central">Parque Central</option>
+                        <option value="Centro Histórico y Misión de Guadalupe">Centro Histórico y Misión de Guadalupe</option>
+                        <option value="Eventos Culturales y Gastronomía">Eventos Culturales y Gastronomía</option>
+                    </select>
+                </div>
+
+                <label for="comentarios" style="display:block; margin-bottom:6px; font-family:Arial, sans-serif; font-size:14px;">Dudas o comentarios sobre tu visita</label>
+                <textarea id="comentarios" rows="4" placeholder="¿Qué te gusta de Ciudad Juárez aparte de las tortas del profe Juárez?" style="width:100%; box-sizing:border-box; padding:11px 12px; margin-bottom:24px; border:1px solid #cbd5e1; border-radius:6px; font-size:15px; font-family:Arial, sans-serif; resize:vertical;"></textarea>
+                
+                <button type="submit" style="width:100%; padding:14px; background-color:green; color:white; border:none; border-radius:6px; font-size:16px; cursor:pointer; font-weight:bold;">Enviar Consulta</button>
+            </form>
+        </section>
+
         <script>
-            const formulario = document.getElementById('formEmergencia');
-            const campoDescripcion = document.getElementById('descripcion');
+            // Corregidos los IDs para coincidir con los elementos HTML del formulario
+            const formulario = document.getElementById('formJuarezTurismo');
+            const campoDescripcion = document.getElementById('comentarios');
             const campoNombre = document.getElementById('nombre');
 
             formulario.addEventListener('submit', (evento) => {
                 evento.preventDefault();           
                 const situacionTexto = campoDescripcion.value.trim().toLowerCase();
                 const nombreTexto = campoNombre.value.trim().toLowerCase();
-                // Lógica de validación / respuestas
+                
                 if (situacionTexto.includes('extraño a mi ex')) {
-                    alert("Atención: Esta línea es solo para emergencias médicas o de seguridad.");
-                } else if(situacionTexto.includes("me duele la panza")) {
+                    alert("Atención: Esta línea es solo para consultas turísticas o comunitarias.");
+                } else if (situacionTexto.includes("me duele la panza")) {
                     alert("Si los síntomas persisten, consulte a un médico de inmediato.");
                 } else {
-                    alert("Su reporte ha sido enviado con éxito a los servicios de emergencia.");
+                    alert("Su consulta ha sido enviada con éxito.");
                 }
             });
         </script>
     </main>
+
     <!-- 4. PIE DE PÁGINA (Footer) -->
     <footer id="contactos" style="background-color:#1f2a37; color:#c9d1db; padding:24px 16px; text-align:center; font-family:Arial, sans-serif; font-size:13px; line-height:1.6;">
         <p style="margin:0 0 6px; color:#ffffff; font-weight:bold;">Jesús Jáquez - Desarrollo Web</p>
